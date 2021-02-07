@@ -12,13 +12,15 @@ Complete work.
 1 added ajax call for show those cities which are under selected state.
 2 added avatar to user
 3 added multiple images to posts
-4 deployed on heroku
+4 added multiple select tags.
 
 Used Feature
 1 Active Storage for Image storage.
-2 tag gem for tag_list of post.
+2 Added tagging table for show tag lists.
 3 Devise gem for login logout.
 
 Remain work
 1 theme adding.
+2 not showing tags auto search.
+3 not deployed on heroku becouse of use defaulat database.
 
