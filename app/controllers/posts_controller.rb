@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :build_post, only: %i[new create]
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    # @posts = Post.all.order(created_at: :desc)
+    params[:tag] ? @posts = Post.tagged_with(params[:tag]) : @posts = Post.all
   end
 
   def new; end
@@ -47,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :tag_list, :description, :user_id, :images)
+    params.require(:post).permit(:title, :description, :user_id, :images, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
   end
 end

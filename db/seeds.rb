@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Tag.create(name: "like")
+Tag.create(name: "details")
+Tag.create(name: "motivation")
+Tag.create(name: "galaxy")
+
 country = Country.create(name: 'India')
 state = State.create(
   [

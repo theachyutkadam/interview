@@ -11,13 +11,13 @@
       <%@posts.each do |post|%>
         <tr>
           <td><%=post.id%></td>
-          <td><%=post.title%></td>
+          <h2><%= post.title %></h2>
+            <p>Tags: <%= raw post.tags.map(&:name).map { |t| link_to t }.join(', ') %></p>
           <td><%=post.description%></td>
           <td><%=post.user.email%></td>
           <td><%=link_to "Edit", edit_post_path(post), class: "btn .btn-info"%></td>
           <td><%=link_to "add comments", new_comment_path(:post_id => post.id), class: "btn .btn-info"%></td>
-          <td><%= link_to 'Destroy', post_path(post),
-            data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+          <td><%= link_to 'Destroy', post_path(post), data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
         </tr>
       <%end%>
     </tbody>
