@@ -6,7 +6,7 @@ added seed file for country and state selection.
 not added bootstrap setup for UI.
 use rails version- Rails 6.0.3.4
 use ruby version- ruby 2.6.3p62
-
+run the application "http://localhost:3000/users/sign_in"
 
 Complete work.
 1 added ajax call for show those cities which are under selected state.
