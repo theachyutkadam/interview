@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_07_035403) do
+ActiveRecord::Schema.define(version: 2021_02_07_040850) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(version: 2021_02_07_035403) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "tags"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "states", force: :cascade do |t|
     t.string "name"
     t.integer "country_id", null: false
@@ -84,5 +94,6 @@ ActiveRecord::Schema.define(version: 2021_02_07_035403) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cities", "states"
+  add_foreign_key "posts", "users"
   add_foreign_key "states", "countries"
 end
