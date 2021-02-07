@@ -13,6 +13,7 @@ Complete work.
 2 added avatar to user
 3 added multiple images to posts
 4 added multiple select tags.
+5 login from google funcationality added but no working.
 
 Used Feature
 1 Active Storage for Image storage.
