@@ -19,9 +19,10 @@ Used Feature
 1 Active Storage for Image storage.
 2 Added tagging table for show tag lists.
 3 Devise gem for login logout.
+4 omniauth-google-oauth2 for google login(not working.)
 
 Remain work
 1 theme adding.
 2 not showing tags auto search.
-3 not deployed on heroku becouse of use defaulat database.
-
+3 not deployed on heroku becouse of use default database.
+4 not able to deploy on ngrock becouse of laptop issue(terminal not working.)
